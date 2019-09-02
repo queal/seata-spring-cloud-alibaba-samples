@@ -187,7 +187,10 @@ table seata_goods has not record`
 ### Some Notice
 if you can't connect seata-server
 
-check spring.alibaba.seata.tx-service-group: my_test_tx_group
+check config
+```
+spring.alibaba.seata.tx-service-group: my_test_tx_group
+```
 
 
 ### pom.xml
@@ -205,7 +208,7 @@ spring-cloud-starter-alibaba-seata
 
 nacos, openfeign, sentinel
 ```
- <dependency>
+<dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 </dependency>
