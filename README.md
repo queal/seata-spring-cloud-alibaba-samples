@@ -3,11 +3,13 @@ spring-cloud-alibaba seata samples
 
 ## Quick Start
 technology stack : 
-- spring-cloud-alibaba
-- nacos
+- jdk 1.8
+- spring-cloud Greenwich.SR2
+- spring-cloud-alibaba 2.1.0.RELEASE  
+- nacos 
 - feign
 - sentinel
-- seata
+- seata 0.8.0
 - mysql
 
 https://github.com/alibaba/spring-cloud-alibaba
