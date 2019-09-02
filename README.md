@@ -146,7 +146,7 @@ CREATE TABLE `branch_table` (
 ```
 
  
-####Start Server 
+#### Start Server 
 ``` 
 sh seata-server.sh -p 8091 -h 192.168.x.x -m db
 ```
