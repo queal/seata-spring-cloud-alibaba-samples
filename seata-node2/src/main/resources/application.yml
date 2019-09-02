@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: seata-node2
+    
+  profiles:
+    active: dev
+
+mybatis:
+  mapper.identity: MYSQL
+  mapper-locations: classpath:com/queal/seata/mybatis/mapping/*Mapper.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

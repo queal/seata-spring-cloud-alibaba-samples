@@ -1,0 +1,17 @@
+server:
+  port: 18081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.11.105:3306/seata-test?characterEncoding=utf-8&serverTimezone=GMT%2B8&allowMultiQueries=true
+    username: root
+    password: REALlove888
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.12.104:8848
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
