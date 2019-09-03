@@ -34,7 +34,7 @@ before run, there has some config to do(because i use spring-cloud-alibaba)
 i use nacos for seata discovery-server
 
 #### Edit nacos-config.txt
-```
+```bash
 cd conf
 vi nacos-config.txt
 
@@ -54,7 +54,7 @@ sh nacos-config.sh [nacos-ip]
 
 #### Change registry.conf
 type = 'nacos' to register itself to nacos as service
-```
+```bash
 registry {
   # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
   type = "nacos"
@@ -82,7 +82,7 @@ config {
 
 
 #### seata-init-sql
-```
+```mysql
 CREATE TABLE `undo_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `branch_id` bigint(20) NOT NULL,
@@ -147,7 +147,7 @@ CREATE TABLE `branch_table` (
 
  
 #### Start Server 
-``` 
+```bash
 sh seata-server.sh -p 8091 -h 192.168.x.x -m db
 ```
 -p port
@@ -181,21 +181,21 @@ browser: http://localhost:18081/addGoods1
 
 whether node1.GoodsServiceImpl or node2.GoodsServiceImpl throw Exception
 
-table seata_goods has not record`
+table seata_goods has empty record`
 
 
 ### Some Notice
 if you can't connect seata-server
 
 check config
-```
+```properties
 spring.alibaba.seata.tx-service-group: my_test_tx_group
 ```
 
 
 ### pom.xml
 spring-cloud-starter-alibaba-seata
-```
+```pom
 <dependency>
     <groupId>io.seata</groupId>
     <artifactId>seata-all</artifactId>
@@ -207,7 +207,7 @@ spring-cloud-starter-alibaba-seata
 ```
 
 nacos, openfeign, sentinel
-```
+```pom
 <dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
