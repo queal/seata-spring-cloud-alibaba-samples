@@ -195,7 +195,7 @@ spring.alibaba.seata.tx-service-group: my_test_tx_group
 
 ### pom.xml
 spring-cloud-starter-alibaba-seata
-```pom
+```maven
 <dependency>
     <groupId>io.seata</groupId>
     <artifactId>seata-all</artifactId>
@@ -207,7 +207,7 @@ spring-cloud-starter-alibaba-seata
 ```
 
 nacos, openfeign, sentinel
-```pom
+```maven
 <dependency>
     <groupId>com.alibaba.cloud</groupId>
     <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
